@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Zoom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="full-img" id="fullImgDiv">
+        <img src="Screenshot (1).png" id="fullImg"> 
+        <span onclick="closeFullImg()">X</span>
+    </div>
+    <div class="img-gallary">
+        <img src="wonder.png" onclick="openFullImg(this.src)">
+        <img src="7.jpg" onclick="openFullImg(this.src)">
+        <img src="8.jpg" onclick="openFullImg(this.src)">
+        <img src="10.jpg" onclick="openFullImg(this.src)">
+        <img src="11.jpg" onclick="openFullImg(this.src)">
+        <img src="4.jpg" onclick="openFullImg(this.src)">
+        <img src="5.jpg" onclick="openFullImg(this.src)">
+        <img src="6.jpg" onclick="openFullImg(this.src)">
+    </div>
+
+<div class="vtv"><a href="https://github.com/vtvboopathi">vtv_boopathi</a></div>
+
+
+<script>
+
+    let fullImgDiv = document.getElementById('fullImgDiv')
+    let fullImg = document.getElementById('fullImg')
+
+    function openFullImg(pic){
+        fullImgDiv.style.display = 'flex';
+        fullImg.src = pic
+    }
+
+    function closeFullImg(){
+        fullImgDiv.style.display = 'none';
+    }
+
+</script>
+</body>
+</html>
